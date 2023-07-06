@@ -59,7 +59,7 @@ def import_epc_directory():
 
 def import_cycle_count():
     print("Importing Cycle Count...")
-    pop_up_title = "Select Cycle Count Data (.xlsx)"
+    pop_up_title = "Select Cycle Count Data (.txt)"
     filenames = filedialog.askopenfilenames(initialdir="/", title=pop_up_title,
                                           filetypes=(("txt files", "*.txt"), ("all files", "*.*")))
     global cycle_count_paths
@@ -332,7 +332,7 @@ def submit():
                                                                                      new_status_list)
         export_epc_directory(active_epc_list, active_upc_list, active_date_list,
                              new_epc_list, new_upc_list, new_date_list, new_status_list)
-        print("Active and New EPCs exported.")
+        print("Active and New EPCs exported. Press 'Quit' to quit.")
     else:
         print("Invalid Store Number or Date!")
 
